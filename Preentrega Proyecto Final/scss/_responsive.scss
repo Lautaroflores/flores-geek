@@ -1,0 +1,79 @@
+@mixin  media{
+    overflow-x: scroll;
+    .article_galeria{
+        display: flex;
+        flex-wrap: wrap;
+        .foto1, .foto2, .foto3, .foto4, .foto5, .foto6, .foto7 {
+            height: auto;
+            width: auto;
+            margin: 6%;
+        }
+    }
+}
+@media only screen and (max-width: 768px) {
+    .galeria {
+        @include media;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .galeria {
+        @include media;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .galeria {
+        @include media;
+    }
+} 
+
+@media only screen and (max-width: 768px) {
+    .redes h3, a{
+        display: inline;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .redes h3, a{
+        display: inline;
+    }
+}
+@media only screen and (max-width: 480px) {
+    .redes h3, a{
+        display: inline;
+    }
+} 
+
+@media only screen and (max-width: 768px) {
+    .peliculas{
+        overflow-x: scroll;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .peliculas{
+        overflow-x: scroll;
+    }
+    
+}
+@media only screen and (max-width: 480px) {
+    .peliculas{
+        overflow-x: scroll;
+    }
+} 
+
+@media only screen and (max-width: 768px) {
+    body{
+        overflow: scroll;
+    }
+}
+@media only screen and (max-width: 600px) {
+    body{
+        overflow: scroll;}
+    
+}
+@media only screen and (max-width: 480px) {
+    body{
+        overflow: scroll;
+    }
+} 

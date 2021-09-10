@@ -1,0 +1,329 @@
+@import "responsive";
+@import "animaciones";
+$color: white;
+$color2: #B70E21;
+$margin: 30px 80px;
+/*Aplico a los grids*/
+@mixin grid{
+background-size: cover;
+background-position: center;
+border-radius: 10px;
+display: flexbox;
+flex-wrap: wrap;
+}
+/*Aplico formulario*/
+@mixin formulario {
+    width: 100%;
+    padding: .7em;
+    border: none;
+    background-color: black;
+    outline: 0;
+    color: $color;
+    border-bottom: 1px solid $color;
+    
+}
+
+html {
+    margin-left: 20px;
+    margin-right: 20px;
+    
+}
+
+header {
+    height: 120px;
+}
+
+
+body {
+    height: 50px;
+    background-image:url(marvel.jpg);
+    background-size: cover;
+    background-position:center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+.index {
+    overflow-y: scroll;
+}
+
+nav {
+    text-align:center;
+    height: 45px; 
+}
+
+#geek {
+    text-decoration: none;
+    font-size: 55px;
+    font-weight: bold;
+    color:$color;
+} 
+
+ul li a:hover {
+    background-image: linear-gradient(blue,$color2);
+    padding: 19px;
+    transition: 0.4s;
+    border-radius: 3px;
+    cursor: pointer;
+    
+}
+
+ul li a {
+    background-color: black;
+}
+
+a {
+    text-decoration: none;
+    padding: 5px;
+    font-weight: bolder;
+ 
+}
+
+h1 {
+    text-align: center;
+    margin: $margin;
+    animation-name: animacion;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    color: $color2
+}
+
+.section_index {
+    background-color:whitesmoke;
+    padding: 25px;
+    line-height: 3;
+    border-radius: 20px;
+    opacity: 0.9;
+    p {
+        text-align: center;
+        text-align: justify;
+        margin: $margin;
+    }
+}
+
+h3 {
+	font-weight: lighter;
+    height: 5px;
+    color: $color;
+}
+
+
+footer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content:flex-start;
+    margin-top: 30px;
+    div {
+        display: inline;
+        img {
+        width: 50px;
+        height: 50px;
+        position: relative;
+        animation-name: myanimation;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        }
+    }
+}
+
+/*Galería*/
+
+.article_galeria {
+    display: grid;
+    grid-template-areas: 
+    "foto1 foto2"
+    "foto3 foto7"
+    "foto5 foto6"
+    "foto4 foto4";
+    grid-template-columns: repeat(2, 510px);
+    grid-template-rows: repeat(4, 300px);
+    margin-left: 80px;
+    justify-content: center;
+    img:hover {
+        transform: scale(1.1 , 1.1);
+        transition: 0.4s;
+        border-radius: 10px;
+    }
+}
+
+
+.foto1 {
+    grid-area: foto1;
+}
+
+.foto2 {
+    grid-area: foto2;
+}
+
+.foto3 {
+    grid-area: foto3;
+}
+
+.foto4 {
+    grid-area: foto4;
+
+}
+
+.foto5 {
+    grid-area: foto5;
+}
+
+.foto6 {
+    grid-area: foto6;
+}
+.foto7 {
+    grid-area: foto7;
+}
+
+#foto4 {
+    width: 961px;
+    height: 300px;
+}
+#foto1 {
+    width: 510px;
+}
+
+/*Peliculas*/
+.fases {
+    padding: 3%;
+    font-size: 25px;
+    background-color: $color;
+    opacity: 0.7;
+    border-radius: 15px;
+    margin-top: 15px;
+    margin-right: 25px;
+    
+    text-align: center;
+}
+section ol li{
+    display: block;
+    width: auto;
+    font-weight: bold;
+    color: $color;
+    margin: 20px;
+}
+
+.peliculas {
+    overflow-y: scroll;
+}
+.pelis {
+    display: grid;
+    grid-template-areas: "grid1 grid2 grid3 grid4";
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(1, auto);
+    column-gap: 15px;
+}
+
+.grid1 {
+    grid-area: grid1; 
+    @include grid;
+    background-image: url(imagenes/fases/thor.jpg);
+   
+}
+.grid2 {
+    grid-area: grid2;
+    @include grid;
+    background-image: url(imagenes/fases/guardianes.jpg);
+}
+.grid3 {
+    grid-area: grid3;
+    @include grid;
+    background-image: url(imagenes/fases/panther.jpg);
+   
+}
+.grid4 {
+    grid-area: grid4;
+    @include grid;
+    background-image: url(imagenes/fases/dr.jpg);
+}
+.pelis ol:hover{
+    transform: scale(1.1 , 1.1);
+    transition: 0.4s;
+    border-radius: 10px;
+}
+
+/*Series*/
+
+.series {
+    display: grid;
+    grid-template-areas: 
+    "loki shield"
+    "wanda falcon";
+    grid-template-columns: repeat(2, 2fr);
+    grid-template-rows: 50% 50%;
+    column-gap: 15px;
+    row-gap: 30px;
+    a {
+        position: relative;
+        text-decoration: none;
+        display: inline;
+        color: $color;
+        text-transform: uppercase;
+        vertical-align: text-top;
+        text-orientation: mixed;
+        color: $color2;
+    }
+    img {
+        padding: 0;
+        margin-right: 0px;
+        width: 300px;
+        height: 300px;
+    }
+    p {
+        color:$color;
+    }
+}
+.loki{
+    grid-area: loki;
+}
+.shield{
+    grid-area: shield;
+}
+.wanda {
+    grid-area: wanda;
+}
+.falcon {
+    grid-area: falcon;
+}
+
+/*Contacto*/
+.formulario h1{
+    color: $color2;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    margin-left: 42%;
+    font-weight:bolder;
+    
+}
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    label {
+        display: block;
+        color: $color2;
+        font-weight: bolder;
+        font-style: italic;
+    }
+    p {
+        margin: 0;
+        padding: 1em;
+    }
+    .boton {
+        grid-column: 1/3;
+    }
+    button, input, textarea {
+        @include formulario;
+    }
+    button {
+        background: $color2;
+        border: 0;
+        text-transform: uppercase;
+        padding: 1em;
+    }
+    button:hover, button:focus {
+        background: #d63031;
+        color: $color;
+        transition: background-color 0.5s ease-out;
+    }
+}
