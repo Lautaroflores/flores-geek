@@ -67,6 +67,15 @@
 @media only screen and (max-width: 480px) {
   body {
     overflow: scroll; } }
+@media only screen and (max-width: 768px) {
+  #serie {
+    overflow: scroll; } }
+@media only screen and (max-width: 600px) {
+  #serie{
+    overflow: scroll;} }
+@media only screen and (max-width: 480px) {
+  #serie{
+    overflow: scroll;} } 
 
 @keyframes myanimation {
   0% {
@@ -175,7 +184,10 @@ footer div img {
 /*Galería*/
 .article_galeria {
   display: grid;
-  grid-template-areas: "foto1 foto2" "foto3 foto7" "foto5 foto6" "foto4 foto4";
+  grid-template-areas: "foto1 foto2"
+ "foto3 foto7"
+ "foto5 foto6"
+ "foto4 foto4";
   grid-template-columns: repeat(2, 510px);
   grid-template-rows: repeat(4, 300px);
   margin-left: 80px;
@@ -237,17 +249,20 @@ section ol li {
 .pelis {
   display: grid;
   grid-template-areas: "grid1 grid2 grid3 grid4";
-  grid-template-columns: repeat(4, auto);
+  grid-template-columns: repeat(4, 25%);
   grid-template-rows: repeat(1, auto);
-  column-gap: 15px; }
+  column-gap: 15px;
+  display:flex;
+  flex-wrap: wrap;
+   }
+  
 
 .grid1 {
   grid-area: grid1;
   background-size: cover;
   background-position: center;
   border-radius: 10px;
-  display: flexbox;
-  flex-wrap: wrap;
+  
   background-image: url(imagenes/fases/thor.jpg); }
 
 .grid2 {
@@ -255,8 +270,7 @@ section ol li {
   background-size: cover;
   background-position: center;
   border-radius: 10px;
-  display: flexbox;
-  flex-wrap: wrap;
+  
   background-image: url(imagenes/fases/guardianes.jpg); }
 
 .grid3 {
@@ -264,8 +278,6 @@ section ol li {
   background-size: cover;
   background-position: center;
   border-radius: 10px;
-  display: flexbox;
-  flex-wrap: wrap;
   background-image: url(imagenes/fases/panther.jpg); }
 
 .grid4 {
@@ -273,8 +285,6 @@ section ol li {
   background-size: cover;
   background-position: center;
   border-radius: 10px;
-  display: flexbox;
-  flex-wrap: wrap;
   background-image: url(imagenes/fases/dr.jpg); }
 
 .pelis ol:hover {
@@ -285,11 +295,13 @@ section ol li {
 /*Series*/
 .series {
   display: grid;
-  grid-template-areas: "loki shield" "wanda falcon";
+  grid-template-areas: "loki shield"
+ "wanda falcon";
   grid-template-columns: repeat(2, 2fr);
   grid-template-rows: 50% 50%;
   column-gap: 15px;
-  row-gap: 30px; }
+  row-gap: 30px;
+  }
   .series a {
     position: relative;
     text-decoration: none;
@@ -298,14 +310,18 @@ section ol li {
     text-transform: uppercase;
     vertical-align: text-top;
     text-orientation: mixed;
-    color: #B70E21; }
+    background-color: #B70E21; }
+  .series a:hover {
+          color: black;
+ }
   .series img {
     padding: 0;
     margin-right: 0px;
     width: 300px;
     height: 300px; }
   .series p {
-    color: white; }
+    color: black;
+    background-color:#B70E21 ; }
 
 .loki {
   grid-area: loki; }
@@ -332,7 +348,8 @@ form {
   grid-template-columns: 1fr 1fr; }
   form label {
     display: block;
-    color: #B70E21;
+    color: white;
+    background-color: #B70E21;
     font-weight: bolder;
     font-style: italic; }
   form p {

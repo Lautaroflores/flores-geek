@@ -48,6 +48,7 @@
 @media only screen and (max-width: 768px) {
     .peliculas{
         overflow-x: scroll;
+        
     }
 }
 @media only screen and (max-width: 600px) {
@@ -75,5 +76,21 @@
 @media only screen and (max-width: 480px) {
     body{
         overflow: scroll;
+    }
+} 
+@media only screen and (max-width: 768px) {
+    #serie {
+      overflow: scroll;
+    }
+}
+@media only screen and (max-width: 600px) {
+    #serie{
+      overflow: scroll;
+    }
+    
+}
+@media only screen and (max-width: 480px) {
+    #serie{
+      overflow: scroll;
     }
 } 

@@ -213,6 +213,8 @@ section ol li{
     grid-template-columns: repeat(4, auto);
     grid-template-rows: repeat(1, auto);
     column-gap: 15px;
+    display: flex;
+    flex-wrap: wrap; 
 }
 
 .grid1 {
@@ -253,7 +255,7 @@ section ol li{
     grid-template-columns: repeat(2, 2fr);
     grid-template-rows: 50% 50%;
     column-gap: 15px;
-    row-gap: 30px;
+    row-gap: 30px; 
     a {
         position: relative;
         text-decoration: none;
@@ -262,7 +264,10 @@ section ol li{
         text-transform: uppercase;
         vertical-align: text-top;
         text-orientation: mixed;
-        color: $color2;
+        background-color: $color2;
+        a:hover {
+            color: black;
+        }
     }
     img {
         padding: 0;
@@ -271,7 +276,8 @@ section ol li{
         height: 300px;
     }
     p {
-        color:$color;
+        color:black;
+        background-color: $color2;
     }
 }
 .loki{
