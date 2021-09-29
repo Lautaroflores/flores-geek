@@ -183,6 +183,7 @@ footer div img {
 
 /*Galería*/
 .article_galeria {
+  overflow-x: hidden;
   display: grid;
   grid-template-areas: "foto1 foto2"
  "foto3 foto7"
@@ -190,7 +191,7 @@ footer div img {
  "foto4 foto4";
   grid-template-columns: repeat(2, 510px);
   grid-template-rows: repeat(4, 300px);
-  margin-left: 80px;
+  margin-left: 1%;
   justify-content: center; }
   .article_galeria img:hover {
     transform: scale(1.1, 1.1);
@@ -237,26 +238,27 @@ footer div img {
   text-align: center; }
 
 section ol li {
-  display: block;
-  width: auto;
+  display: flex;
+  overflow:-moz-hidden-unscrollable;
+  padding-bottom: 5%;
+  margin-right: 30%;
+  height: auto;
   font-weight: bold;
   color: white;
-  margin: 20px; }
+  justify-content: start; }
 
 .peliculas {
   overflow-y: scroll; }
 
 .pelis {
   display: grid;
+  margin: 0 auto;
   grid-template-areas: "grid1 grid2 grid3 grid4";
-  grid-template-columns: repeat(4, 25%);
-  grid-template-rows: repeat(1, auto);
-  column-gap: 15px;
-  display:flex;
-  flex-wrap: wrap;
-   }
-  
-
+  grid-template-columns: repeat(auto,auto);
+  grid-template-rows: repeat(auto, auto);
+  column-gap: 10px; 
+  overflow-wrap: normal;}
+ 
 .grid1 {
   grid-area: grid1;
   background-size: cover;
@@ -311,17 +313,18 @@ section ol li {
     vertical-align: text-top;
     text-orientation: mixed;
     background-color: #B70E21; }
+  
   .series a:hover {
           color: black;
  }
   .series img {
-    padding: 0;
-    margin-right: 0px;
+    float: left;
     width: 300px;
     height: 300px; }
   .series p {
-    color: black;
-    background-color:#B70E21 ; }
+    
+    color: white;
+    background-color: #B70E21; }
 
 .loki {
   grid-area: loki; }
